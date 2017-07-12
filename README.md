@@ -72,6 +72,33 @@ population is associated with a disease or trait.
 A tag SNP is a representative SNP in a region of the genome with high linkage
 disequilibrium (the non-random association of alleles at two or more loci). 
 
+
+# Statistical Concepts
+
+## Hypothesis testing
+
+In hypothesis testing, we are interested in finding out whether a statistical
+model is supported by the data or not. Usually, we have a null hypothesis
+(denoted by H0), and we want to test whether the data support the null
+hypothesis or not. If the data does not support the null hypothesis, then
+we reject the null hypothesis, and is in favor of the alternative hypothesis
+(denoted by H1).
+
+For GWAS, H0 is the hypothesis that the SNP is not causal for the trait, or
+the SNP has no effect on the trait.
+
+## Effect size ($\beta$)
+
+Effect size measures the strength of influence of a variable on the out come.
+In genetics, the variable is the SNP, and the outcome is the trait.
+
+## Estimated effect size ($\hat{beta}$)
+
+## Standardization
+
+For us, standardization means center and scale the data such that after the
+transformation, the mean of the data is 0 and variance is 1.
+
 # Suggested books
 
 Applied Statistical Genetics with R: For Population-based Association Studies
