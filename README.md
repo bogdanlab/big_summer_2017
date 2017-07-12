@@ -163,6 +163,12 @@ expectation. That is, after we apply the estimator on different samples of
 data, and take the mean of the estimated parameter, we get the true parameter
 back.
 
+## Simulation
+
+To see how well an estimator works, we usually apply it on simulated data
+first, where we can control the parameter. An estimator is good if it gives
+back the parameter we use in the simulation.
+
 # Suggested books
 
 Applied Statistical Genetics with R: For Population-based Association Studies
