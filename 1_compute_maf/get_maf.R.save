@@ -1,3 +1,6 @@
+#install package
+install.packages('/plink2R-master/plink2R/', repos=NULL)
+
 # import the necessary libraries
 library("data.table")
 library("plink2R")
