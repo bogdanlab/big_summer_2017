@@ -1,0 +1,30 @@
+# import the necessary libraries
+library("data.table")
+library("plink2R")
+
+# load in the reference genotype data
+ref_file_name = "/u/project/pasaniuc/shihuwen/big_summer_data_tmp/1000G.EUR.1"
+ref_file = read_plink(ref_file_name,impute="avg")
+
+# parse out legend and the genotype data
+ref_legend = ref_file$bim
+ref_genotype = ref_file$bed
+
+# define a function to compute the allele frequency
+get_maf <- function(genotype) {
+
+    # first compute the allele frequency
+    nindv = nrow(genotype)
+    allele_freq = colSums(genotype) / (2.0*nindv)
+
+    # get minor allele frequency
+    maf = allele_freq
+    maf[maf>0.5] = 1.0 - maf[maf>0.5]
+    return(data.frame(maf))
+}
+
+# run the get_maf function on our data set
+maf = get_maf(ref_genotype)
+head(maf)
+print("MAF for the SNP rs3094315:")
+print(maf["rs3094315","maf"])
