@@ -87,17 +87,65 @@ we reject the null hypothesis, and is in favor of the alternative hypothesis
 For GWAS, H0 is the hypothesis that the SNP is not causal for the trait, or
 the SNP has no effect on the trait.
 
-## Effect size ($\beta$)
+## Linear model
+
+A linear model is a model in which the response variable is a linear function
+of the dependent variable. In genetics, the response variable is the trait
+and the dependent variable is the SNP.
+
+## Effect size
 
 Effect size measures the strength of influence of a variable on the out come.
 In genetics, the variable is the SNP, and the outcome is the trait.
 
-## Estimated effect size ($\hat{beta}$)
+## Estimated effect size
+
+In reality, one doesn't know the true effect size under the model, but can
+obtain an estimation of the effect by fitting the model on the data (e.g.
+through linear regression).
 
 ## Standardization
 
 For us, standardization means center and scale the data such that after the
 transformation, the mean of the data is 0 and variance is 1.
+
+## Heritability
+
+Heritability is the amount of variance in a trait that is accounted for by
+genetic variations. More precicsely, if we assume
+Trait = Genetics + Environment, then heritability is
+Var(Genetics) / Var(Trait). Heritability is always a value between 0 and 1.
+
+## Genetic covariance
+
+Genetic covariance is the covariance between two traits that is due to
+genetic variations. If we assume
+
+1. Trait1 = Genetics1 + Environment1
+2. Trait2 = Genetics2 + Environment2
+
+then the genetic covariance between the two traits is
+Cov(Genetics1, Genetics2).
+
+## Estimator
+
+In statistics, an estimator is a method to quantify a parameter of a data.
+For example, taking a sum of a list of numbers and dividing the sum by the
+size of the list is a way to estimate the mean of the data.
+
+## Bias
+
+The same estimator may yield different results on different samples of data.
+We say the estimator is biased if the mean of the estimated parameter after
+we apply the estimator on different samples of data is not equal to the true
+parameter. And bias is the difference between the mean and the true parameter.
+
+## Unbiased estimator
+
+An unbiased estimator is an estimator that estimates the true parameter in
+expectation. That is, after we apply the estimator on different samples of
+data, and take the mean of the estimated parameter, we get the true parameter
+back.
 
 # Suggested books
 
