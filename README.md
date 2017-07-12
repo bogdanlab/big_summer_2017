@@ -54,7 +54,7 @@ Thus for A: 2 x (2) + (1) divided by 2 * (4). This is 0.625. Since the
 frequency of the other allele is simply 1 - f, then frequency of C is
 1 - 0.625 or 0.375.
 
-# Linkage disequilibrium (LD)
+## Linkage disequilibrium (LD)
 
 Linkage disequilibrium (LD), indicates non-random association of alleles at
 two or more loci, not necessarily on the same chromosome. It refers to the
@@ -103,6 +103,22 @@ In genetics, the variable is the SNP, and the outcome is the trait.
 In reality, one doesn't know the true effect size under the model, but can
 obtain an estimation of the effect by fitting the model on the data (e.g.
 through linear regression).
+
+## Standard error
+
+Standard error is the uncertainty one has about an estimate. The larger
+the standard error, the less certain one is about an estimate. Standard
+error usually decreases with the number of samples.
+
+## Z-score
+
+Z-score is a measure of the strength of assiciation.
+Z-score is calculated as (estimated effect size) / (standard error of the
+effect size). (Note that the standard error here can be interpreted as
+standard deviation.) If the null hypothesis is that the true effect size
+is 0, then Z-score tells you how many standard deivation the estimated effect
+is away from 0. Thus, the higher the Z-score (the more far away the estimated
+effect is from the null) the stronger the association signal.
 
 ## Standardization
 
