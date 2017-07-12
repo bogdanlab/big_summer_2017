@@ -75,18 +75,6 @@ disequilibrium (the non-random association of alleles at two or more loci).
 
 # Statistical Concepts
 
-## Hypothesis testing
-
-In hypothesis testing, we are interested in finding out whether a statistical
-model is supported by the data or not. Usually, we have a null hypothesis
-(denoted by H0), and we want to test whether the data support the null
-hypothesis or not. If the data does not support the null hypothesis, then
-we reject the null hypothesis, and is in favor of the alternative hypothesis
-(denoted by H1).
-
-For GWAS, H0 is the hypothesis that the SNP is not causal for the trait, or
-the SNP has no effect on the trait.
-
 ## Linear model
 
 A linear model is a model in which the response variable is a linear function
@@ -119,6 +107,18 @@ standard deviation.) If the null hypothesis is that the true effect size
 is 0, then Z-score tells you how many standard deivation the estimated effect
 is away from 0. Thus, the higher the Z-score (the more far away the estimated
 effect is from the null) the stronger the association signal.
+
+## Hypothesis testing
+
+In hypothesis testing, we are interested in finding out whether a statistical
+model is supported by the data or not. Usually, we have a null hypothesis
+(denoted by H0), and we want to test whether the data support the null
+hypothesis or not. If the data does not support the null hypothesis, then
+we reject the null hypothesis, and is in favor of the alternative hypothesis
+(denoted by H1).
+
+For GWAS, H0 is the hypothesis that the SNP is not causal for the trait, or
+the SNP has no effect on the trait.
 
 ## Standardization
 
