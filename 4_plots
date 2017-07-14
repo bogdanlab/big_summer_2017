@@ -1,0 +1,43 @@
+
+
+manhattan_region <- function(data = res) {
+	
+	# Sort the data by chromosome and then location
+  	data.ord <- data[order(as.numeric(data$CHR),data$POS),]
+  	data.ord <- data.ord[!is.na(data.ord$POS),]
+
+
+  	# Plot the data
+  	plot(x = data.ord$POS, y = -log10(data.ord$PVAL),
+       pch=20, cex=.8, xlab="Position",
+       ylab="- log10 (P-value)")
+ 
+   	# Add bonferroni line
+  	abline(h=-log10(5*10^-8), col = "gray60")
+
+	}
+
+qq_region <- function(pval) {
+
+	observed <- sort(pval)
+	lobs <- -(log10(observed))
+
+	expected <- c(1:length(observed)) 
+	lexp <- -(log10(expected / (length(expected)+1)))
+
+	plot(lexp, lobs, col="black", xlab="Expected (-logP)", ylab="Observed (-logP)", xlim = c(0, max(lexp)), ylim=c(0, max(lobs)), pch=20)
+	abline(0, 1, col = "red")
+}
+
+   
+	# If you don't have position create a position vector for now
+	res = data.frame(CHR=1, POS = 1:length(zscores), Z = zscores)
+	# Add p-value
+	res$PVAL = 2*pnorm(abs(res$Z), lower.tail = F)
+	
+	pdf("manhattan_region.pdf", width=6, height=6)
+	manhattan_region(res)
+	dev.off()
+
+	pdf("qqplot.pdf", width=6, height=6)
+	qq_region(res$PVAL)
