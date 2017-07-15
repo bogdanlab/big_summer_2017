@@ -8,9 +8,7 @@ manhattan_region <- function(data = res) {
 
 
   	# Plot the data
-  	plot(x = data.ord$POS, y = -log10(data.ord$PVAL),
-       pch=20, cex=.8, xlab="Position",
-       ylab="- log10 (P-value)")
+  	plot(x = data.ord$POS, y = -log10(data.ord$PVAL), pch=20, cex=.8, xlab="Position", ylab="- log10 (P-value)")
  
    	# Add bonferroni line
   	abline(h=-log10(5*10^-8), col = "gray60")
@@ -29,7 +27,7 @@ qq_region <- function(pval) {
 	abline(0, 1, col = "red")
 }
 
-   
+        # Example use
 	# If you don't have position create a position vector for now
 	res = data.frame(CHR=1, POS = 1:length(zscores), Z = zscores)
 	# Add p-value
