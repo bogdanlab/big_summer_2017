@@ -178,6 +178,36 @@ To see how well an estimator works, we usually apply it on simulated data
 first, where we can control the parameter. An estimator is good if it gives
 back the parameter we use in the simulation.
 
+## Eigenvalue and Eigenvectors
+
+Eigenvectors and eigenvalues have many important applications for dimensionality reduction (such as Principal Component Analysis). There are a lot of problems that can be modeled with linear transformations.
+
+Eigenvectors are the "axes" (directions) along which a linear transformation acts simply by "stretching/compressing" and/or "flipping"; eigenvalues give you the factors by which this compression occurs. They are multipliers, i.e. numbers that represent how much stretching has taken place or how much something has been scaled up by.
+
+The more directions you have along which you understand the behavior of a linear transformation, the easier it is to understand the linear transformation; so you want to have as many linearly independent eigenvectors as possible associated to a single linear transformation.
+
+An eigenvalue is a number that is derived from a square matrix. Usually represented by λ. 
+Let A be a square matrix (a collections of n rows of n numbers which means that there are n x n numbers in total). 
+Let x be a nonzero vector. 
+
+We say that a number is the eigenvalue for this square matrix if and only if there exists a nonzero vector x such that Ax = λx where:
+
+A is the square matrix
+x is the nonzero vector
+λ is a nonzero value.
+In this circumstance, λ is the eigenvalue and x is the eigenvector.
+
+## Value decomposition of LD
+
+A = UΣV*
+
+Columns of U and V are, respectively, left- and right-singular vectors for the corresponding singular values. 
+The columns of V (right-singular vectors) are eigenvectors of M*M.
+The columns of U (left-singular vectors) are eigenvectors of MM*.
+The non-zero elements of Σ (non-zero singular values) are the square roots of the non-zero eigenvalues of M*M or MM*.
+
+We will use the R library "svd" to obtain the singular values (diagonal entries Σ) and the left singular vectors (U). 
+
 # Suggested books
 
 Applied Statistical Genetics with R: For Population-based Association Studies
