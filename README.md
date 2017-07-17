@@ -202,9 +202,12 @@ In this circumstance, λ is the eigenvalue and x is the eigenvector.
 A = UΣV*
 
 Columns of U and V are, respectively, left- and right-singular vectors for the corresponding singular values. 
-The columns of V (right-singular vectors) are eigenvectors of M*M.
-The columns of U (left-singular vectors) are eigenvectors of MM*.
-The non-zero elements of Σ (non-zero singular values) are the square roots of the non-zero eigenvalues of M*M or MM*.
+
+The columns of V (right-singular vectors) are eigenvectors of M^tM.
+
+The columns of U (left-singular vectors) are eigenvectors of MM^t.
+
+The non-zero elements of Σ (non-zero singular values) are the square roots of the non-zero eigenvalues of M^tM or MM^t.
 
 We will use the R library "svd" to obtain the singular values (diagonal entries Σ) and the left singular vectors (U). 
 
